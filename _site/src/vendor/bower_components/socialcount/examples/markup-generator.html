@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width">
+		<title>Social Count</title>
+		<link rel="stylesheet" href="../dist/socialcount-with-icons.css">
+		<link rel="stylesheet" href="http://filamentgroup.github.io/demo-head/demohead.css">
+		<!-- scripts would be better placed below near the </body> -->
+		<script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+		<script src="../dist/socialcount.js"></script>
+
+		<style>
+			html {
+				font: 100% Helvetica, sans-serif;
+			}
+			* {
+				-webkit-box-sizing: border-box;
+				-moz-box-sizing: border-box;
+				box-sizing: border-box;
+			}
+			table {
+				margin: 1em 0;
+			}
+			th {
+				text-align: left;
+			}
+			th:after {
+				content: ':';
+			}
+			th, td {
+				font-size: .8125em;
+			}
+			h3 {
+				clear: both;
+			}
+			code,
+			textarea {
+				font-family: Consolas, Monaco, monospace;
+			}
+			form {
+				display: none;
+			}
+			.js form {
+				display: block;
+			}
+			fieldset {
+				border: none;
+			}
+			legend {
+				font-style: italic;
+			}
+			input[type="text"],
+			textarea {
+				width: 80%;
+				min-width: 280px;
+			}
+			textarea {
+				height: 200px;
+				tab-size: 2;
+			}
+		</style>
+		<script>
+		$(function() {
+			document.documentElement.className = 'js';
+
+			var $markup = $( '#markup' );
+			$( 'form' ).bind( 'submit', function() {
+				var markup = [ '<ul class="' ],
+					url = $( '#url' ).val(),
+					isRecommend = $( '#fb-recommend:checked' ).length,
+					shareText = $('#sharetext').val();
+
+				markup.push( 'socialcount' );
+				if( $( '#size-small:checked' ).length ) {
+					markup.push( ' socialcount-small' );
+				} else if( $( '#size-large:checked' ).length ) {
+					markup.push( ' socialcount-large' );
+				}
+				markup.push( '"' );
+				markup.push( ' data-url="' + url + '"' );
+				if( isRecommend ) {
+					markup.push( ' data-facebook-action="recommend"' );
+				}
+				if( $( '#counts-show:checked' ).length ) {
+					markup.push( ' data-counts="true"' );
+				}
+				if( shareText ) {
+					markup.push( ' data-share-text="' + shareText + '"' );
+				}
+				markup.push( '>\n' );
+
+				markup.push( '\t<li class="facebook"><a href="https://www.facebook.com/sharer/sharer.php?u=' + url + '" title="Share on Facebook">' );
+				if( $( '#icons:checked' ).length ) {
+					markup.push( '<span class="social-icon icon-facebook"></span>' );
+				}
+				markup.push( '<span class="count">' + ( isRecommend ? 'Recommend' : 'Like' ) + '</span></a></li>\n' );
+
+				markup.push( '\t<li class="twitter"><a href="https://twitter.com/intent/tweet?text=' + url + '" title="Share on Twitter">' );
+				if( $( '#icons:checked' ).length ) {
+					markup.push( '<span class="social-icon icon-twitter"></span>' );
+				}
+				markup.push( '<span class="count">Tweet</span></a></li>\n' );
+
+				markup.push( '\t<li class="googleplus"><a href="https://plus.google.com/share?url=' + url + '" title="Share on Google Plus">' );
+				if( $( '#icons:checked' ).length ) {
+					markup.push( '<span class="social-icon icon-googleplus"></span>' );
+				}
+				markup.push( '<span class="count">+1</span></a></li>\n' );
+
+				markup.push( '</ul>' );
+				$markup.val( markup.join( '' ) );
+				return false;
+			});
+		});
+		</script>
+		<script src="http://filamentgroup.github.io/demo-head/loadfont.js"></script>
+	</head>
+	<body>
+		<div class="demo-header">
+			<div class="company">
+				<img src="http://filamentgroup.com/images/fg-logo-positive-sm-crop.png">
+			</div>
+			<div class="details">
+				<h1 class="description-container">Demo of <span class="repo-name">SocialCount</span>
+					<span class="description">Simple barebones project to show share counts from various social networks.</span>
+				</h1>
+				<ul class="outbound-links">
+					<li><a href="https://github.com/filamentgroup/SocialCount">Code</a></li>
+					<li><a href="http://filamentgroup.com/lab/socialcount.html">Article</a></li>
+					<li><a href="https://github.com/filamentgroup/SocialCount/issues">Issues</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="nav-container">
+			<div class="docs-globalnav">
+				<nav class="docs-nav">
+					<a href="index.html">Medium (Default)</a>
+					<a href="small.html">Small</a>
+					<a href="large.html">Large</a>
+					<a href="markup-generator.html" class="current">Markup Generator</a>
+				</nav>
+			</div>
+		</div>
+		<div class="docs-main">
+			<form>
+				<h2 id="generator">Markup Generator</h2>
+				<fieldset>
+					<label>URL <input type="text" id="url" value="http://www.google.com/"></label>
+				</fieldset>
+				<fieldset>
+					<legend>Size</legend>
+					<label><input type="radio" name="size" id="size-small"> Small</label>
+					<label><input type="radio" name="size" checked> Default</label>
+					<label><input type="radio" name="size" id="size-large"> Large</label>
+				</fieldset>
+				<fieldset>
+					<legend>Facebook</legend>
+					<label><input type="radio" name="facebook" checked> Like</label>
+					<label><input type="radio" name="facebook" id="fb-recommend"> Recommend</label>
+				</fieldset>
+				<fieldset>
+					<label>Twitter Share Text <input type="text" id="sharetext" value="Google is a search engine"></label>
+				</fieldset>
+				<fieldset>
+					<label><input type="checkbox" name="size" id="counts-show"> Fetch Share Counts</label>
+				</fieldset>
+				<fieldset>
+					<label><input type="checkbox" name="size" id="icons"> Include Icons</label>
+				</fieldset>
+				<fieldset>
+					<input type="submit" value="Generate Markup">
+				</fieldset>
+				<fieldset>
+					<textarea id="markup"></textarea>
+				</fieldset>
+			</form>
+		</div>
+	</body>
+</html>
