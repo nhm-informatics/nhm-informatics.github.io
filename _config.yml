@@ -8,7 +8,7 @@
 # Site settings
 title: NHM Informatics Blog
 email: bioinf@nhm.ac.uk
-description: > # Blob for Natural History Museum Informatics Team
+description: "Here a description"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://yourdomain.com" # the base hostname & protocol for your site
 twitter_username: informaticians

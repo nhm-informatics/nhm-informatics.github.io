@@ -1,23 +1,43 @@
 ---
-layout: default
+layout: base
 ---
 
-<div class="home">
+<header>
 
-  <h1 class="page-heading">Posts</h1>
+    <div class="container">
+        {% include nav.html %}
 
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+        <h1>Biodiversity Informatics Blog
+            <small><i class="fa fa-map-marker"></i> The Natural History Museum, London</small>
+        </h1>
+    </div>
 
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
+</header>
 
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+<div class="container">
+
+    <div class="row">
+
+        <div class="col-sm-12">
+
+            <ul class="post-list">
+                {% for post in site.posts %}
+                <li>
+
+                    <h2>
+                        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+                    </h2>
+
+                    {{ post.excerpt }}
+
+                    <span class="post-meta">By {{ post.author }} - {{ post.date | date: "%-d %B %Y" }}</span>
+
+                </li>
+                {% endfor %}
+            </ul>
+
+        </div>
+
+    </div>
 
 </div>
