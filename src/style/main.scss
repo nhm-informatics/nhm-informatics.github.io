@@ -161,6 +161,11 @@ ul.post-list {
     border-bottom: 1px solid $grey-color-light;
     padding-bottom: 25px;
 
+    &:last-child{
+      border-bottom: none;
+    }
+
+
     h2 {
       margin-bottom: 25px;
     }
@@ -179,12 +184,12 @@ ul.post-list {
 }
 
 h1.post-title{
-  margin: 40px 0 20px 0;
+  margin: 50px 0 30px 0;
 }
 
 .side-column {
   .post-meta {
-    margin-top: 100px;
+    margin-top: 120px;
     line-height: 25px;
   }
     h4{

@@ -1,0 +1,24 @@
+---
+layout: default
+---
+
+<div class="container">
+
+    <div class="row">
+
+        <div class="col-sm-12">
+
+            <h1 class="post-title" itemprop="name headline">Posts tagged <em>{{ page.category }}</em></h1>
+
+            <ul class="post-list">
+                {% for post in site.categories.[page.category] %}
+                    {% include list_post.html post=post %}
+                {% endfor %}
+            </ul>
+
+        </div>
+
+
+    </div>
+
+</div>

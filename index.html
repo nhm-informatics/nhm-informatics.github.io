@@ -22,17 +22,7 @@ layout: base
 
             <ul class="post-list">
                 {% for post in site.posts %}
-                <li>
-
-                    <h2>
-                        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-                    </h2>
-
-                    {{ post.excerpt }}
-
-                    <span class="post-meta">By {{ post.author }} - {{ post.date | date: "%-d %B %Y" }}</span>
-
-                </li>
+                    {% include list_post.html post=post %}
                 {% endfor %}
             </ul>
 

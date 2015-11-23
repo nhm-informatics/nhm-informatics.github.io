@@ -8,7 +8,7 @@
 # Site settings
 title: NHM Informatics Blog
 email: bioinf@nhm.ac.uk
-description: "Here a description"
+description: "Proin quis placerat velit, vitae porta nisl. Donec interdum, sapien dictum consequat posuere, magna lorem viverra felis, vitae suscipit sapien mauris in eros. Aenean lobortis neque id fermentum placerat. Aliquam auctor lorem vitae nibh finibus, porttitor ultrices diam rutrum. Mauris quis elit vel sem consequat luctus vel et ante. Aliquam placerat lacus ut arcu interdum ullamcorper. Donec vitae faucibus ante, sed convallis massa. Duis at pharetra magna. Mauris dictum, turpis at elementum consequat, odio velit placerat velit, sit amet porta dui ligula eget turpis. Sed posuere finibus eros eget tempus. Curabitur feugiat augue a lectus condimentum congue."
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://yourdomain.com" # the base hostname & protocol for your site
 twitter_username: informaticians
