@@ -14,7 +14,6 @@ $spacing-unit: 30px;
 
 $text-color: #111;
 $background-color: #fdfdfd;
-$brand-color: #2a7ae2;
 $link-color: #228901;
 $link-hover-color: darken($link-color, 10%);
 
@@ -47,7 +46,7 @@ $on-laptop: 800px;
 "syntax-highlighting";
 
 
-a {
+body a {
   color: $link-color;
   &:hover {
     color: $link-hover-color;
