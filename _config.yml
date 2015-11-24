@@ -6,9 +6,9 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title: NHM Informatics Blog
+title: NHM Informatics Lab
 email: bioinf@nhm.ac.uk
-description: "Proin quis placerat velit, vitae porta nisl. Donec interdum, sapien dictum consequat posuere, magna lorem viverra felis, vitae suscipit sapien mauris in eros. Aenean lobortis neque id fermentum placerat. Aliquam auctor lorem vitae nibh finibus, porttitor ultrices diam rutrum. Mauris quis elit vel sem consequat luctus vel et ante. Aliquam placerat lacus ut arcu interdum ullamcorper. Donec vitae faucibus ante, sed convallis massa. Duis at pharetra magna. Mauris dictum, turpis at elementum consequat, odio velit placerat velit, sit amet porta dui ligula eget turpis. Sed posuere finibus eros eget tempus. Curabitur feugiat augue a lectus condimentum congue."
+description: "<p>The informatics team is inventing new digital tools for measuring, recording and explaining the natural world.</p><p>The Museums 79 million specimens and diverse research programme generate a vast amount of biodiversity data. We are structuring this information and developing digital tools to analyse, exchange and communicate the data with a global audience.</p>"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://yourdomain.com" # the base hostname & protocol for your site
 twitter_username: informaticians

@@ -15,8 +15,8 @@ $spacing-unit: 30px;
 $text-color: #111;
 $background-color: #fdfdfd;
 $brand-color: #2a7ae2;
-$link-color: #009AEE;
-$link-hover-color: darken($link-color, 15%);
+$link-color: #228901;
+$link-hover-color: darken($link-color, 10%);
 
 $grey-color: #828282;
 $grey-color-light: lighten($grey-color, 40%);
@@ -94,13 +94,17 @@ header {
   }
 
   h1 {
-    margin: 50px 0 80px 0;
-    text-align: center;
+    margin: 50px auto 60px auto;
+    text-shadow: 1px 2px 1px #000;
+    max-width: 800px;
+    font-size: 30px;
+    text-align: left;
     small {
       font-size: 16px;
       display: block;
-      margin-top: 12px;
+      margin-top: 30px;
       color: #fff;
+      text-align: center;
     }
   }
 
@@ -227,12 +231,18 @@ ul.socialcount{
   padding: 5px 10px!important;
   font-size: 12px!important;
   text-transform: uppercase;
+
+  &:hover{
+    background: $link-hover-color!important;
+  }
+
 }
 
 footer {
   border: none;
   margin-top: 50px;
   background: $grey-color-light;
+  padding-bottom: 50px;
 
   a, a:visited, a:hover {
     color: $grey-color !important;
