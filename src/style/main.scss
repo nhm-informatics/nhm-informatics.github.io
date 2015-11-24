@@ -47,7 +47,7 @@ $on-laptop: 800px;
 "syntax-highlighting";
 
 
-a, .post-list a {
+body a {
   color: $link-color;
   &:hover {
     color: $link-hover-color;
